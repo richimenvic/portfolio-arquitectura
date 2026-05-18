@@ -31,7 +31,8 @@ function SeoSync() {
   useEffect(() => {
     const key = Object.keys(seoByPath).find((path) => location.pathname === path) || '/'
     const [title, description] = seoByPath[key]
-    updateSeo({ title, description, canonical: `${siteUrl}${location.pathname}` })
+    const canonicalPath = location.pathname === '/arquitecto-pozoblanco' ? '/arquitecto-pozoblanco/' : location.pathname
+    updateSeo({ title, description, canonical: `${siteUrl}${canonicalPath}` })
   }, [location.pathname])
   return null
 }
