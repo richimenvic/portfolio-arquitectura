@@ -11,6 +11,7 @@ import Contact from './pages/Contact'
 import LegalNotice from './pages/LegalNotice'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import CookiesPolicy from './pages/CookiesPolicy'
+import ArchitectPozoblanco from './pages/ArchitectPozoblanco'
 import { siteUrl, updateSeo } from './seo'
 
 const seoByPath = {
@@ -22,6 +23,7 @@ const seoByPath = {
   '/aviso-legal': ['Aviso Legal | Mendieta Studio', 'Aviso legal de Mendieta Studio con información del titular, condiciones de uso, propiedad intelectual y jurisdicción aplicable.'],
   '/politica-privacidad': ['Política de Privacidad | Mendieta Studio', 'Política de privacidad de Mendieta Studio conforme RGPD y LOPDGDD: finalidad, bases legales, conservación y derechos del usuario.'],
   '/politica-cookies': ['Política de Cookies | Mendieta Studio', 'Información sobre el uso de cookies en mendietastudio.com, finalidades, base legal y gestión de preferencias del usuario.'],
+  '/arquitecto-pozoblanco': ['Arquitecto en Pozoblanco | Mendieta Studio', 'Arquitecto en Pozoblanco, Córdoba. Proyectos de vivienda, reformas, licencias de obra, cambios de uso, documentación técnica, interiorismo y BIM.'],
 }
 
 function SeoSync() {
@@ -70,6 +72,7 @@ export default function App() {
         <Route path="/politica-privacidad" element={<PrivacyPolicy />} />
         <Route path="/politica-privacidad.html" element={<Navigate to="/politica-privacidad" replace />} />
         <Route path="/politica-cookies" element={<CookiesPolicy />} />
+        <Route path="/arquitecto-pozoblanco" element={<ArchitectPozoblanco />} />
         <Route path="/politica-cookies.html" element={<Navigate to="/politica-cookies" replace />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
